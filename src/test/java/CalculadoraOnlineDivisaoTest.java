@@ -12,7 +12,6 @@ import static org.junit.Assert.assertEquals;
 
 public class CalculadoraOnlineDivisaoTest {
     private WebDriver driver;
-    private final int waitTime = 1500;
 
     @Before
     public void setUp() {
@@ -41,11 +40,7 @@ public class CalculadoraOnlineDivisaoTest {
         botaoIgual.click();
 
         // Aguardando um curto período para exibir o resultado
-        try {
-            Thread.sleep(waitTime);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Utils.espera();
 
         // Verificando o resultado
         WebElement resultado = driver.findElement(By.id("calc1_resultat"));
@@ -67,11 +62,7 @@ public class CalculadoraOnlineDivisaoTest {
         botaoIgual.click();
 
         // Aguardando um curto período para exibir o resultado
-        try {
-            Thread.sleep(waitTime);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Utils.espera();
 
         // Verificando o resultado
         WebElement resultado = driver.findElement(By.id("calc1_resultat"));
@@ -95,11 +86,7 @@ public class CalculadoraOnlineDivisaoTest {
         botaoIgual.click();
 
         // Aguardando um curto período para exibir o resultado
-        try {
-            Thread.sleep(waitTime);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Utils.espera();
 
         // Verificando o resultado
         WebElement resultado = driver.findElement(By.id("calc1_resultat"));
@@ -127,11 +114,7 @@ public class CalculadoraOnlineDivisaoTest {
         botaoIgual.click();
 
         // Aguardando um curto período para exibir o resultado
-        try {
-            Thread.sleep(waitTime);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Utils.espera();
 
         // Verificando o resultado
         WebElement resultado = driver.findElement(By.id("calc1_resultat"));
@@ -152,11 +135,7 @@ public class CalculadoraOnlineDivisaoTest {
         botaoIgual.click();
 
         // Aguardando um curto período para exibir o resultado
-        try {
-            Thread.sleep(waitTime);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Utils.espera();
 
         // Verificando o resultado
         WebElement resultado = driver.findElement(By.id("calc1_resultat"));
