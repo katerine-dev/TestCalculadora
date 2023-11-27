@@ -1,7 +1,7 @@
 # TestCalculadora
 
 Este repositório contém testes automatizados end-to-end para uma calculadora online, desenvolvida utilizando Selenium WebDriver, Java, Maven e JUnit.
-O software em produ¸c˜ao em plataforma web está nesse [link](https://calculadora-digital.com.br/). 
+O software em produção em plataforma web está nesse [link](https://calculadora-digital.com.br/). 
 
 ## Estrutura do Projeto
 O projeto está organizado da seguinte maneira:
