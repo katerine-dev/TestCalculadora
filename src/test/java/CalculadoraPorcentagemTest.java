@@ -85,6 +85,32 @@ public class CalculadoraPorcentagemTest {
         assertEquals("-1", resultado.getAttribute("value"));
     }
 
+    @Test
+    public void porcentagemPrecisaoTest() {
+        // Localizando os elementos de entrada
+        WebElement inputNumero = driver.findElement(By.id("calc1_resultat"));
+        WebElement botaoPorcentagem = driver.findElement(By.xpath("//input[@value='%']"));
+        WebElement botaoMultiplicacao = driver.findElement(By.xpath("//input[@value='x']"));
+        WebElement botaoDivisao = driver.findElement(By.xpath("//input[@value='÷']"));
+        WebElement botaoIgual = driver.findElement(By.xpath("//input[@value='=']"));
+
+        // Executando a operação 10% x 1 ÷ 3
+        inputNumero.sendKeys("10");
+        botaoPorcentagem.click();
+        botaoMultiplicacao.click();
+        inputNumero.sendKeys("1");
+        botaoDivisao.click();
+        inputNumero.sendKeys("3");
+        botaoIgual.click();
+
+        // Aguardando um curto período para exibir o resultado
+        Utils.espera();
+
+        // Verificando o resultado
+        WebElement resultado = driver.findElement(By.id("calc1_resultat"));
+        assertEquals("0.03333333333333333", resultado.getAttribute("value"));
+    }
+
 
     @After
     public void tearDown() {
